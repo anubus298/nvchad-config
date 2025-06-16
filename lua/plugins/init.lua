@@ -16,7 +16,7 @@ return {
   {
     "williamboman/mason.nvim",
     opts = {
-      ensure_installed = { "gopls", "intelephense" },
+      ensure_installed = { "gopls", "intelephense", "jsonls", "typescript-language-server", "tailwindcss", "eslint" },
       automatic_installation = true,
     },
   },
@@ -28,7 +28,7 @@ return {
     config = function() end,
     init = function()
       vim.g.VM_maps = {
-        ["Find Under"] = "<leader>m",
+        ["Find Under"] = "<leader>a",
       }
     end,
   },
@@ -38,6 +38,14 @@ return {
       require("scrollbar").setup()
     end,
   },
+  -- add this to your lua/plugins.lua, lua/plugins/init.lua,  or the file you keep your other plugins:
+  {
+    "numToStr/Comment.nvim",
+    opts = {
+      -- add any options here
+    },
+  },
+
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 

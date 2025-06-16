@@ -1,10 +1,23 @@
 require("nvchad.configs.lspconfig").defaults()
 
 local on_attach = require("nvchad.configs.lspconfig").on_attach
-local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
+local lspconfig = require "lspconfig"
 
-local servers = { "html", "cssls", "gopls", "intelephense" }
-vim.lsp.enable(servers)
+local servers = {
+  "html",
+  "cssls",
+  "gopls",
+  "intelephense",
+  "jsonls",
+  "ts_ls",
+  "tailwindcss",
+  "eslint",
+}
 
--- read :h vim.lsp.config for changing options of lsp servers
+for _, srv in ipairs(servers) do
+  lspconfig[srv].setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+  }
+end
