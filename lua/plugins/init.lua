@@ -45,7 +45,16 @@ return {
       -- add any options here
     },
   },
-
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    ---@module "ibl"
+    ---@type ibl.config
+    opts = {},
+    config = function()
+      require("ibl").setup()
+    end,
+  },
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 
