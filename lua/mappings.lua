@@ -35,5 +35,14 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 -- Yank (copy) whole line to system clipboard
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
--- Make Ctrl+c behave like Esc in insert mode
+-- Make Ctrl+c behave like Esc in insert ;mode
 vim.keymap.set("i", "<C-c>", "<Esc>")
+
+-- Go to next diagnostic
+vim.keymap.set("n", "<leader>dn", vim.diagnostic.goto_next)
+
+-- Go to previous diagnostic
+vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev)
+
+-- Show diagnostic in floating window
+vim.keymap.set("n", "<leader>df", vim.diagnostic.open_float)
