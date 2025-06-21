@@ -15,7 +15,22 @@ return {
   {
     "williamboman/mason.nvim",
     opts = {
-      ensure_installed = { "gopls", "intelephense", "jsonls", "typescript-language-server", "tailwindcss", "eslint" },
+      ensure_installed = {
+        "css-lsp",
+        "eslint-lsp",
+        "google-java-format",
+        "gopls",
+        "html-lsp",
+        "intelephense",
+        "jdtls",
+        "json-lsp",
+        "lua-language-server",
+        "prettierd",
+        "pyright",
+        "stylua",
+        "tailwindcss-language-server",
+        "typescript-language-server",
+      },
       automatic_installation = true,
     },
   },
